@@ -1,0 +1,29 @@
+<patchGroups>
+	<fml>
+		<class id="net.minecraftforge.fml.common.FMLModContainer">
+			<replaceMethodCall method="bigWarning" code="{ }">sanityCheckModId</replaceMethodCall>
+		</class>
+		<class id="net.minecraftforge.fml.common.registry.IForgeRegistryEntry$Impl">
+			<replaceMethodCall method="bigWarning" code="{ }">setRegistryName</replaceMethodCall>
+		</class>
+		<class id="net.minecraftforge.oredict.RecipeSorter">
+			<replaceMethodCall method="bigWarning" code="{ }">getPriority</replaceMethodCall>
+		</class>
+	</fml>
+	<enderio>
+		<class id="crazypants.enderio.capacitor.CapacitorKey">
+			<replaceMethodCall method="warn" code="{ }">localizeComment</replaceMethodCall>
+		</class>
+	</enderio>
+	<lootbags>
+		<class id="mal.lootbags.config.BagConfigHandler.">
+			<replaceMethodCall method="LogInfo" code="{ }">parseConfigText,startNewBag,endNewBag,addBagColor,addSecretState,parseColorText</replaceMethodCall>
+		</class>
+	</lootbags>
+	<opencomputers>
+		<class id="li.cil.oc.common.IMC$$anonfun$handleEvent$1$$anonfun$apply$1">
+			<replaceMethodCall method="info" code="{ }">apply</replaceMethodCall>
+			<replaceMethodCall method="s" code="{ }">apply</replaceMethodCall>
+		</class>
+	</opencomputers>
+</patchGroups>
